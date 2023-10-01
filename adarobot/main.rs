@@ -1,4 +1,5 @@
 ///  Solution to ADAROBOT Problem (https://www.spoj.com/problems/ADAROBOT/)
+/// Writeup to this problem is available here: https://caroleq.github.io/Solution-to-ADAROBOT-problem-in-SPOJ/
 
 static BIT_CUBES: &'static [u64; 27] = &[8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197, 2744, 3375, 4096, 4913, 5832, 6859, 8000, 9261, 10648, 12167, 13824, 15625, 17576, 19683, 21952];
 
