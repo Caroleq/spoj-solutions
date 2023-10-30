@@ -1,4 +1,7 @@
 /// Solution to SCYPHER (Substitution Cipher) problem (https://www.spoj.com/problems/SCYPHER/)
+/// Writeup to the problem is available at https://caroleq.github.io/Solution-to-SCYPHER-SPOJ-Problem/
+
+/// The solution does not support cases when partial substitution table recovery is sufficient.
 
 use std::collections::HashSet;
 
