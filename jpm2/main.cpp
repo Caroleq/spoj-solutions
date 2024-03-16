@@ -1,4 +1,5 @@
 // Solution to Just Primes II Problem (https://www.spoj.com/problems/JPM2/)
+// Problem writeup is available here: https://caroleq.github.io/Jpm2-Spoj-Solution/
 
 #include <iostream>
 #include <cmath>
