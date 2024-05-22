@@ -1,4 +1,5 @@
 /// Solution to Ada and Nucleobase Problem (https://www.spoj.com/problems/ADAMATCH/)
+/// Writeup to the problem is available here: https://medium.com/@karolina.gontarek20/fft-in-competitive-programming-solving-adamatch-spoj-problem-ee98577540b2
 
 #include <iostream>
 #include <cmath>
