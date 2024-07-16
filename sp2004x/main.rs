@@ -45,26 +45,26 @@ fn if_can_withdraw_requested_amount(tens_cnt: i64, twenties_cnt: i64, fifties_cn
     let mut left_fifties_cnt = fifties_cnt;
     let mut left_twenties_cnt = twenties_cnt;
 
-    if requested_amount > 100 {
+    if requested_amount > 200 {
         let number_of_50_in_requested_amount = requested_amount / 50;
-        requested_amount -= std::cmp::min(number_of_50_in_requested_amount / 2, fifties_cnt / 2) * 100;
-        left_fifties_cnt -= std::cmp::min(number_of_50_in_requested_amount / 2, fifties_cnt / 2) * 2;
+        requested_amount -= std::cmp::min(number_of_50_in_requested_amount / 4, fifties_cnt / 4) * 200;
+        left_fifties_cnt -= std::cmp::min(number_of_50_in_requested_amount / 4, fifties_cnt / 4) * 4;
         if requested_amount == 0 {
             return true;
         }
 
-        if requested_amount > 100 {
+        if requested_amount > 200 {
             let number_of_20_in_requested_amount = requested_amount / 20;
-            requested_amount -= std::cmp::min(number_of_20_in_requested_amount / 5, twenties_cnt / 5) * 100;
-            left_twenties_cnt -= std::cmp::min(number_of_20_in_requested_amount / 5, twenties_cnt / 5) * 5;
+            requested_amount -= std::cmp::min(number_of_20_in_requested_amount / 10, twenties_cnt / 10) * 200;
+            left_twenties_cnt -= std::cmp::min(number_of_20_in_requested_amount / 10, twenties_cnt / 10) * 10;
             if requested_amount == 0 {
                 return true;
             }
         }
     }
     
-    for fifties_to_take in 0..std::cmp::min(left_fifties_cnt + 1, 3) {
-        for twenties_to_take in 0..std::cmp::min(left_twenties_cnt + 1, 6) {
+    for fifties_to_take in 0..std::cmp::min(left_fifties_cnt + 1, 5) {
+        for twenties_to_take in 0..std::cmp::min(left_twenties_cnt + 1, 11) {
 
             let amount_left = requested_amount - fifties_to_take * 50 - twenties_to_take * 20;
 
