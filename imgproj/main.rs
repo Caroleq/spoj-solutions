@@ -1,4 +1,7 @@
 /// Solution to IMGPROJ (Image Projections) problem (https://www.spoj.com/problems/IMGPROJ/)
+/// 
+/// Writeup for the solution: https://caroleq.github.io/Solution-to-IMGPROJ-SPOJ-Problem/
+/// Writeup for the solution: https://medium.com/@karolina.gontarek20/imgproj-spoj-segment-trees-in-competative-programming-cabc8bca1950
 
 use std::collections::HashSet;
 use std::collections::HashMap;
