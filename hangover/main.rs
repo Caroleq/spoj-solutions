@@ -1,12 +1,10 @@
-
-
+//// Solution to Hangover Problem (https://www.spoj.com/problems/HANGOVER/)
 
 fn read_line_to_f32() -> f32 {
     let mut string = String::new();
     let _ = std::io::stdin().read_line(&mut string);
     return string.trim().parse().expect("Input not an unsigned integer");
 }
-
 
 fn compute_cards_count(overhang: f32) -> usize {
 
