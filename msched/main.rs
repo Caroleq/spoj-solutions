@@ -1,3 +1,5 @@
+/// Solution to Milk Scheduling problem (https://www.spoj.com/problems/MSCHED/)
+
 use std::collections::BinaryHeap;
 
 fn read_line_to_usize() -> usize {
@@ -12,7 +14,6 @@ fn read_line_to_i64_vec() -> Vec<i64> {
     return string.trim().split(' ').map(|s| s.parse().unwrap()).collect();
 }
 
-
 fn main() {
 
     let cows_cnt = read_line_to_usize();
@@ -26,22 +27,21 @@ fn main() {
 
     cows_params.sort_by_key(|params| params.1);
 
-    let mut cows = BinaryHeap::new();
+    let mut negative_profits = BinaryHeap::new();
     for params in cows_params {
-        if cows.len() < params.1 as usize {
-            cows.push((-1) * params.0);
+        if negative_profits.len() < params.1 as usize {
+            negative_profits.push((-1) * params.0);
         }
-        else if cows.peek().unwrap() * (-1) < params.0 {
-            cows.pop();
-            cows.push((-1) * params.0);
+        else if negative_profits.peek().unwrap() * (-1) < params.0 {
+            negative_profits.pop();
+            negative_profits.push((-1) * params.0);
         }
     }
 
     let mut max_profit = 0;
-    for profit in cows {
+    for profit in negative_profits {
         max_profit += (-1) * profit;
     }
 
     println!("{max_profit}", max_profit=max_profit);
-
 }
