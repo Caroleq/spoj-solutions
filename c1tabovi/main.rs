@@ -1,4 +1,4 @@
-/// Solution to Tablovi (https://www.spoj.com/problems/C1TABOVI/)
+/// Solution to Tabovi (https://www.spoj.com/problems/C1TABOVI/)
 
 fn read_line_to_i32_vec() -> Vec<i32> {
     let mut string = String::new();
@@ -30,7 +30,7 @@ fn compute_minimum_shifts_cnt(starting_pos: &Vec<i32>, destination_pos: &Vec<i32
                 dp[idx] = dp[idx - 1];
             }
             else {
-                dp[idx] = dp[idx - 1] + dist_directed.abs() - dist_prev_directed.abs() 
+                dp[idx] = dp[idx - 1] + dist_directed.abs() - dist_prev_directed.abs(); 
             }
         }
         else {
